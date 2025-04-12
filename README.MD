@@ -12,7 +12,7 @@ The following animation demonstrates the effect of the hidden prompt when used w
 
 The PoC shows that a malicious payload can be embedded within Copilot instructions using invisible Unicode characters (specifically, using Tag characters U+E0000 to U+E007F). When these instructions are processed by an AI model like Copilot, the hidden payload can be executed or influence the generated code, potentially leading to security vulnerabilities.
 
-This technique of hiding data within seemingly innocuous text using invisible or non-rendering characters is not new. Markdown and other text-based content formats are generally susceptible to this type of vulnerability. While AI models like Copilot may have safeguards or attempt to avoid generating malicious payloads directly, they can still be manipulated through carefully crafted prompts, especially when the malicious instructions are obfuscated.
+This technique of hiding data within seemingly innocuous text using invisible or non-rendering characters is not new. Markdown and other text-based content formats are generally susceptible to this type of vulnerability. While AI models like Copilot may have safeguards or attempt to avoid generating malicious payloads directly, they can still be manipulated through carefully crafted prompts, especially when the malicious instructions are obfuscated. Furthermore, this technique can be extended beyond simple prompt injection to perform other attacks like data poisoning or decision manipulation, as demonstrated in related research (e.g., [unicode-injection by 0x6f677548](https://github.com/0x6f677548/unicode-injection)).
 
 ## Risk
 
